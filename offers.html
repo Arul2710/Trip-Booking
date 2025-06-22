@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel | Exclusive Offers</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+  <nav>
+    <div class="logo">TravelMachi ✈️</div>
+    <!--  ID and class added below -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a class="active" href="offers.html">Offers</a></li>
+      <li><a href="bookings.html">Bookings</a></li>
+      <li><a href="login.html"><i class="fas fa-user"></i> Login</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+    <!-- Hero Section -->
+    <section class="offers-hero">
+        <h1>Exclusive <span>Travel</span> Offers</h1>
+        <p>Limited time deals for your dream vacation</p>
+    </section>
+
+    <!-- Offers Filter -->
+    <div class="offers-filter">
+        <button class="filter-btn active" data-filter="all">All Offers</button>
+        <button class="filter-btn" data-filter="beach">Beach</button>
+        <button class="filter-btn" data-filter="mountain">Mountain</button>
+        <button class="filter-btn" data-filter="city">City</button>
+        <button class="filter-btn" data-filter="adventure">Adventure</button>
+    </div>
+
+    <!-- Offers Grid -->
+    <div class="offers-container">
+        <!-- Offer 1 -->
+        <div class="offer-card" data-category="beach">
+            <div class="offer-img">
+                <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Maldives Resort">
+                <div class="offer-badge">50% OFF</div>
+            </div>
+            <div class="offer-content">
+                <div class="offer-price">₹25,999</div>
+                <h3>Maldives Paradise Package</h3>
+                <div class="offer-location">
+                    <i class="fas fa-map-marker-alt"></i> Malé, Maldives
+                </div>
+                <div class="offer-details">
+                    <div><i class="fas fa-calendar-alt"></i> 5 Days</div>
+                    <div><i class="fas fa-hotel"></i> 5-Star</div>
+                    <div><i class="fas fa-umbrella-beach"></i> Beachfront</div>
+                </div>
+                <p class="offer-desc">
+                    Enjoy 5 days in a luxury overwater villa with all meals included. Perfect for couples and honeymooners.
+                </p>
+                <div class="offer-timer">
+                    <div class="timer-text">Offer ends in:</div>
+                    <div class="timer-numbers">
+                        <span class="timer-box" id="days1">03</span>:
+                        <span class="timer-box" id="hours1">12</span>:
+                        <span class="timer-box" id="minutes1">45</span>:
+                        <span class="timer-box" id="seconds1">22</span>
+                    </div>
+                </div>
+                <button class="btn-offer">Book Now <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+        
+        <!-- Offer 2 -->
+        <div class="offer-card" data-category="mountain">
+            <div class="offer-img">
+                <img src="img/istockphoto-1206699415-170667a.jpg"Swiss Alps">
+                <div class="offer-badge">Early Bird</div>
+            </div>
+            <div class="offer-content">
+                <div class="offer-price">₹32,999</div>
+                <h3>Swiss Alps Adventure</h3>
+                <div class="offer-location">
+                    <i class="fas fa-map-marker-alt"></i> Zurich, Switzerland
+                </div>
+                <div class="offer-details">
+                    <div><i class="fas fa-calendar-alt"></i> 7 Days</div>
+                    <div><i class="fas fa-hotel"></i> Resort</div>
+                    <div><i class="fas fa-snowboarding"></i> Ski Pass</div>
+                </div>
+                <p class="offer-desc">
+                    7-day ski package with accommodation, equipment rental, and daily breakfast included.
+                </p>
+                <div class="offer-timer">
+                    <div class="timer-text">Offer ends in:</div>
+                    <div class="timer-numbers">
+                        <span class="timer-box" id="days2">05</span>:
+                        <span class="timer-box" id="hours2">08</span>:
+                        <span class="timer-box" id="minutes2">30</span>:
+                        <span class="timer-box" id="seconds2">15</span>
+                    </div>
+                </div>
+                <button class="btn-offer">Book Now <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+
+                <!-- Offer 3 -->
+        <div class="offer-card" data-category="city">
+            <div class="offer-img">
+                <img src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="New York City">
+                <div class="offer-badge">Limited Time</div>
+            </div>
+            <div class="offer-content">
+                <div class="offer-price">₹42,999</div>
+                <h3>New York City Explorer</h3>
+                <div class="offer-location">
+                    <i class="fas fa-map-marker-alt"></i> New York, USA
+                </div>
+                <div class="offer-details">
+                    <div><i class="fas fa-calendar-alt"></i> 6 Days</div>
+                    <div><i class="fas fa-hotel"></i> 4-Star</div>
+                    <div><i class="fas fa-ticket-alt"></i> Attractions</div>
+                </div>
+                <p class="offer-desc">
+                    Explore the Big Apple with included tickets to top attractions and guided tours.
+                </p>
+                <div class="offer-timer">
+                    <div class="timer-text">Offer ends in:</div>
+                    <div class="timer-numbers">
+                        <span class="timer-box" id="days3">02</span>:
+                        <span class="timer-box" id="hours3">18</span>:
+                        <span class="timer-box" id="minutes3">22</span>:
+                        <span class="timer-box" id="seconds3">40</span>
+                    </div>
+                </div>
+                <button class="btn-offer">Book Now <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+        
+ 
+
+    <!-- Offer 5 -->
+<div class="offer-card" data-category="beach">
+    <div class="offer-img">
+        <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1568&q=80" alt="Goa Beach">
+        <div class="offer-badge">Summer Special</div>
+    </div>
+    <div class="offer-content">
+        <div class="offer-price">₹15,999</div>
+        <h3>Goa Beach Festival Package</h3>
+        <div class="offer-location">
+            <i class="fas fa-map-marker-alt"></i> Goa, India
+        </div>
+        <div class="offer-details">
+            <div><i class="fas fa-calendar-alt"></i> 5 Days</div>
+            <div><i class="fas fa-hotel"></i> 4-Star</div>
+            <div><i class="fas fa-cocktail"></i> Nightlife</div>
+        </div>
+        <p class="offer-desc">
+            Experience Goa's famous beaches, nightlife and seafood with this all-inclusive package.
+        </p>
+        <div class="offer-timer">
+            <div class="timer-text">Offer ends in:</div>
+            <div class="timer-numbers">
+                <span class="timer-box" id="days5">04</span>:
+                <span class="timer-box" id="hours5">10</span>:
+                <span class="timer-box" id="minutes5">30</span>:
+                <span class="timer-box" id="seconds5">45</span>
+            </div>
+        </div>
+        <button class="btn-offer">Book Now <i class="fas fa-arrow-right"></i></button>
+    </div>
+</div>
+
+<!-- Offer 6 -->
+<div class="offer-card" data-category="mountain">
+    <div class="offer-img">
+        <img src="https://images.unsplash.com/photo-1581362072978-14998d01fdaa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80" alt="Himalayas">
+        <div class="offer-badge">Early Bird</div>
+    </div>
+    <div class="offer-content">
+        <div class="offer-price">₹28,999</div>
+        <h3>Himalayan Trekking Adventure</h3>
+        <div class="offer-location">
+            <i class="fas fa-map-marker-alt"></i> Manali, India
+        </div>
+        <div class="offer-details">
+            <div><i class="fas fa-calendar-alt"></i> 8 Days</div>
+            <div><i class="fas fa-campground"></i> Camping</div>
+            <div><i class="fas fa-hiking"></i> Guided Trek</div>
+        </div>
+        <p class="offer-desc">
+            8-day guided trek through the Himalayas with camping equipment and meals included.
+        </p>
+        <div class="offer-timer">
+            <div class="timer-text">Offer ends in:</div>
+            <div class="timer-numbers">
+                <span class="timer-box" id="days6">10</span>:
+                <span class="timer-box" id="hours6">05</span>:
+                <span class="timer-box" id="minutes6">15</span>:
+                <span class="timer-box" id="seconds6">20</span>
+            </div>
+        </div>
+        <button class="btn-offer">Book Now <i class="fas fa-arrow-right"></i></button>
+    </div>
+</div>
+
+        <!-- Offer 1 -->
+        <div class="offer-card" data-category="beach">
+            <div class="offer-img">
+                <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Maldives Resort">
+                <div class="offer-badge">50% OFF</div>
+            </div>
+            <div class="offer-content">
+                <div class="offer-price">₹25,999</div>
+                <h3>Maldives Paradise Package</h3>
+                <div class="offer-location">
+                    <i class="fas fa-map-marker-alt"></i> Malé, Maldives
+                </div>
+                <div class="offer-details">
+                    <div><i class="fas fa-calendar-alt"></i> 5 Days</div>
+                    <div><i class="fas fa-hotel"></i> 5-Star</div>
+                    <div><i class="fas fa-umbrella-beach"></i> Beachfront</div>
+                </div>
+                <p class="offer-desc">
+                    Enjoy 5 days in a luxury overwater villa with all meals included. Perfect for couples and honeymooners.
+                </p>
+                <div class="offer-timer">
+                    <div class="timer-text">Offer ends in:</div>
+                    <div class="timer-numbers">
+                        <span class="timer-box" id="days1">03</span>:
+                        <span class="timer-box" id="hours1">12</span>:
+                        <span class="timer-box" id="minutes1">45</span>:
+                        <span class="timer-box" id="seconds1">22</span>
+                    </div>
+                </div>
+                <button class="btn-offer">Book Now <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+        
+      <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>© 2025 Travel ARUL. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

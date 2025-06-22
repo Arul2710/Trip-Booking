@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelMachi | Bookings</title>
+     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+           <div class="logo">TravelMachi ✈️</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="offers.html">Offers</a></li>
+                <li><a class="active" href="bookings.html">Bookings</a></li>
+                <li><a href="login.html"><i class="fas fa-user"></i> Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bookings-hero">
+        <h1>Book Your Dream Vacation</h1>
+        <p>Fill in your details to confirm your booking</p>
+    </section>
+
+    <!-- Booking Container -->
+    <div class="booking-container">
+        <!-- Booking Form -->
+        <div class="booking-form">
+            <h2>Personal Information</h2>
+            <form id="bookingForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea id="address" rows="3" required></textarea>
+                </div>
+                
+                <h2>Travel Details</h2>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="checkIn">Check-In Date</label>
+                        <input type="date" id="checkIn" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkOut">Check-Out Date</label>
+                        <input type="date" id="checkOut" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="adults">Adults</label>
+                        <select id="adults" required>
+                            <option value="1">1 Adult</option>
+                            <option value="2">2 Adults</option>
+                            <option value="3">3 Adults</option>
+                            <option value="4">4 Adults</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="children">Children</label>
+                        <select id="children">
+                            <option value="0">0 Children</option>
+                            <option value="1">1 Child</option>
+                            <option value="2">2 Children</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="specialRequests">Special Requests</label>
+                    <textarea id="specialRequests" rows="3"></textarea>
+                </div>
+                
+                <div class="payment-options">
+                    <h2>Payment Method</h2>
+                    
+                    <div class="payment-method" onclick="selectPayment('credit')">
+                        <i class="far fa-credit-card"></i>
+                        <div>
+                            <h4>Credit/Debit Card</h4>
+                            <p>Pay with Visa, Mastercard, etc.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-method" onclick="selectPayment('paypal')">
+                        <i class="fab fa-paypal"></i>
+                        <div>
+                            <h4>PayPal</h4>
+                            <p>Pay with your PayPal account</p>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-method" onclick="selectPayment('bank')">
+                        <i class="fas fa-university"></i>
+                        <div>
+                            <h4>Bank Transfer</h4>
+                            <p>Direct bank transfer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the terms and conditions</label>
+                </div>
+                
+                <button type="submit" class="btn">Confirm Booking</button>
+            </form>
+        </div>
+        
+        <!-- Booking Summary -->
+        <div class="booking-summary">
+            <h2>Your Booking Summary</h2>
+            
+            <div class="summary-card">
+                <h3>Swiss Alps Adventure</h3>
+                <div class="summary-item">
+                    <span>Destination:</span>
+                    <span>Zurich, Switzerland</span>
+                </div>
+                <div class="summary-item">
+                    <span>Duration:</span>
+                    <span>7 Days / 6 Nights</span>
+                </div>
+                <div class="summary-item">
+                    <span>Check-in:</span>
+                    <span id="summaryCheckIn">--/--/----</span>
+                </div>
+                <div class="summary-item">
+                    <span>Check-out:</span>
+                    <span id="summaryCheckOut">--/--/----</span>
+                </div>
+                <div class="summary-item">
+                    <span>Guests:</span>
+                    <span id="summaryGuests">1 Adult</span>
+                </div>
+            </div>
+            
+            <div class="summary-card">
+                <h3>Price Breakdown</h3>
+                <div class="summary-item">
+                    <span>Package Price:</span>
+                    <span>₹25,999</span>
+                </div>
+                <div class="summary-item">
+                    <span>Taxes & Fees:</span>
+                    <span>₹2,500</span>
+                </div>
+                <div class="summary-item summary-total">
+                    <span>Total:</span>
+                    <span>₹28,499</span>
+                </div>
+            </div>
+            
+            <div class="summary-card">
+                <h3>Need Help?</h3>
+                <p>Contact our customer support for any questions about your booking.</p>
+                <p><i class="fas fa-phone"></i> +91 9876543210</p>
+                <p><i class="fas fa-envelope"></i> support@travelmachi.com</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>© 2025 TravelMachi. All rights reserved.</p>
+            <p>Made with ❤️ by Macha</p>
+        </div>
+    </footer>
+
+
+     <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
