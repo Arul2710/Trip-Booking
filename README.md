@@ -25,7 +25,7 @@ Real-time offer countdown timer
 Home Preview
 
 🔗 Live Demo
-Coming soon – hosted on GitHub Pages
+https://arul2710.github.io/Trip-booking/
 
 🙋‍♂️ Developed by
 Arulprakash
